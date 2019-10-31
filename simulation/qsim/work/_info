@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/vic/SOMADOR/simulation/qsim
+vbcd_converter
+Z1 I781kbC:d:IP5AR<nBHl;Y1
+Z2 V<AF3_bKCaWLPTJP6TH^930
+Z3 d/home/vic/SOMADOR/simulation/qsim
+Z4 w1572173501
+Z5 8socorro.vo
+Z6 Fsocorro.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|socorro.vo|
+Z9 o-work work -O0
+Z10 !s100 hK2F4_Qk@n<]>inXY^hbD3
+Z11 !s108 1572173502.196657
+Z12 !s107 socorro.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vbcd_converter_vlg_check_tst
+Z13 !s100 7NHjOz=?NcQImzWJhYlMk0
+Z14 IgEz1H>zaiheam2?<9;Gg81
+Z15 V]U8QZjScCCSJU[JZGXo9D3
+R3
+Z16 w1572173497
+Z17 8socorro.vt
+Z18 Fsocorro.vt
+L0 57
+R7
+r1
+31
+Z19 !s108 1572173502.234311
+Z20 !s107 socorro.vt|
+Z21 !s90 -work|work|socorro.vt|
+R9
+!i10b 1
+!s85 0
+!s101 -O0
+vbcd_converter_vlg_sample_tst
+Z22 !s100 T_Z;ogBChdF?TzmKkSMzk1
+Z23 IKRA4fZbTjiT^K@8Q0o0dF0
+Z24 V5@4ZZJ`mcV_>?zKOFm1zZ0
+R3
+R16
+R17
+R18
+L0 29
+R7
+r1
+31
+R19
+R20
+R21
+R9
+!i10b 1
+!s85 0
+!s101 -O0
+vbcd_converter_vlg_vec_tst
+Z25 !s100 ZRfWdzOz>L6K<WHkfWh^=1
+Z26 I;ODmMIe>Xg`cKB>8KLgz10
+Z27 VNn1Yno55N0a9]g48cDD>a2
+R3
+R16
+R17
+R18
+Z28 L0 313
+R7
+r1
+31
+R19
+R20
+R21
+R9
+!i10b 1
+!s85 0
+!s101 -O0
+vpre_projeto
+Z29 IlQh=b1n`VBN9`1jI88Vk@3
+Z30 VdGn?<34]7z35KIzL9zjek0
+Z31 dC:\Users\aluno\Documents\SOMADOR-20191030T154905Z-001\SOMADOR\simulation\qsim
+Z32 w1572468759
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+!i10b 1
+Z33 !s100 oX=V@6Gl]jCB?]??ob18f0
+!s85 0
+Z34 !s108 1572468760.695000
+R12
+!s101 -O0
+vpre_projeto_vlg_check_tst
+!i10b 1
+!s100 VQFR7c@YeU]B@X]bf2JID2
+I7Fd>QjNNLVjSTOj36`YJ;1
+VRNW^D_5i[`4=m]f:E]d;C2
+R31
+R32
+R17
+R18
+L0 57
+R7
+r1
+!s85 0
+31
+Z35 !s108 1572468760.930000
+Z36 !s107 socorro.vt|
+R21
+!s101 -O0
+R9
+vpre_projeto_vlg_sample_tst
+!i10b 1
+Z37 !s100 2f4aj;C0=m]i3iGbMlDGA2
+Z38 I;l7XKLNUlZez0J2[e@>ea2
+Z39 VWGQRkhJJC51zL`E;`NeA31
+R31
+R32
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R35
+R36
+R21
+!s101 -O0
+R9
+vpre_projeto_vlg_vec_tst
+!i10b 1
+!s100 TO[HAS7k2Qn2f^Dec9Rj]3
+I0JT]VhYbi8@:68=aHX_NE0
+Z40 V9KB7_0[`V7L^aC^QjA::J1
+R31
+R32
+R17
+R18
+L0 469
+R7
+r1
+!s85 0
+31
+R35
+R36
+R21
+!s101 -O0
+R9

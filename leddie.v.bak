@@ -1,0 +1,18 @@
+module process_led(
+	input negative,
+	input overflow,
+	input [8..0] dig,
+	output [7..0] led1,
+	output [7..0] led2,
+	output [7..0] led3,
+	output [7..0] led4
+);
+
+logic [7:0] dig1;
+logic [7:0] dig2;
+logic [7:0] dig3;
+logic [28:0]	error;
+assign error = {7'b0110000, 7'b1111010, 7'b1111010, 7'b1100010};
+assign led1 = {overflow ? error[28:21] : 0};
+
+endmodule

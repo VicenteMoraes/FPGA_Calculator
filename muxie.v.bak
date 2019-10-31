@@ -1,0 +1,9 @@
+module mux (
+	input [7:0] A,
+	input [7:0] B,
+	input select,
+	output [7:0] S
+);
+
+assign S = (select ? A : B);
+endmodule
