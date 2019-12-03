@@ -1,5 +1,5 @@
 Analysis & Synthesis report for socorro
-Wed Oct 30 17:59:04 2019
+Tue Dec  3 20:54:01 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,10 +13,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "teclado:inst2|controlador:U0|Debouncer:d3"
+ 13. Port Connectivity Checks: "teclado:inst2|controlador:U0|Debouncer:d2"
+ 14. Port Connectivity Checks: "teclado:inst2|controlador:U0|Debouncer:d1"
+ 15. Port Connectivity Checks: "teclado:inst2|controlador:U0|Debouncer:d0"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +48,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 30 17:59:04 2019           ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec  3 20:54:01 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; socorro                                         ;
-; Top-level Entity Name              ; pre_projeto                                     ;
+; Top-level Entity Name              ; projeto                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 295                                             ;
-;     Total combinational functions  ; 295                                             ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 74                                              ;
+; Total logic elements               ; 707                                             ;
+;     Total combinational functions  ; 629                                             ;
+;     Dedicated logic registers      ; 208                                             ;
+; Total registers                    ; 208                                             ;
+; Total pins                         ; 95                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +71,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; pre_projeto        ; socorro            ;
+; Top-level entity name                                                      ; projeto            ; socorro            ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
 ; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
@@ -156,82 +162,138 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                            ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
-; pre_projeto.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/aluno/Documents/SOMADOR-20191030T154905Z-001/SOMADOR/pre_projeto.bdf           ;         ;
-; adder.v                          ; yes             ; User Verilog HDL File              ; C:/Users/aluno/Documents/SOMADOR-20191030T154905Z-001/SOMADOR/adder.v                   ;         ;
-; bcd_converter.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/aluno/Documents/SOMADOR-20191030T154905Z-001/SOMADOR/bcd_converter.bdf         ;         ;
-; positive.v                       ; yes             ; User Verilog HDL File              ; C:/Users/aluno/Documents/SOMADOR-20191030T154905Z-001/SOMADOR/positive.v                ;         ;
-; muxie.v                          ; yes             ; User Verilog HDL File              ; C:/Users/aluno/Documents/SOMADOR-20191030T154905Z-001/SOMADOR/muxie.v                   ;         ;
-; leddie.v                         ; yes             ; User Verilog HDL File              ; C:/Users/aluno/Documents/SOMADOR-20191030T154905Z-001/SOMADOR/leddie.v                  ;         ;
-; bcd_converter_wrapper.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/aluno/Documents/SOMADOR-20191030T154905Z-001/SOMADOR/bcd_converter_wrapper.bdf ;         ;
-; change_sign.v                    ; yes             ; User Verilog HDL File              ; C:/Users/aluno/Documents/SOMADOR-20191030T154905Z-001/SOMADOR/change_sign.v             ;         ;
-; 74185.v                          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/others/maxplus2/74185.v                             ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
+; pre_projeto.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/pre_projeto.bdf           ;         ;
+; adder.v                          ; yes             ; User Verilog HDL File              ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/adder.v                   ;         ;
+; bcd_converter.bdf                ; yes             ; User Block Diagram/Schematic File  ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/bcd_converter.bdf         ;         ;
+; positive.v                       ; yes             ; User Verilog HDL File              ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/positive.v                ;         ;
+; muxie.v                          ; yes             ; User Verilog HDL File              ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/muxie.v                   ;         ;
+; leddie.v                         ; yes             ; User Verilog HDL File              ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/leddie.v                  ;         ;
+; bcd_converter_wrapper.bdf        ; yes             ; User Block Diagram/Schematic File  ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/bcd_converter_wrapper.bdf ;         ;
+; change_sign.v                    ; yes             ; User Verilog HDL File              ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/change_sign.v             ;         ;
+; concat.sv                        ; yes             ; User SystemVerilog HDL File        ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/concat.sv                 ;         ;
+; calculator.bdf                   ; yes             ; User Block Diagram/Schematic File  ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/calculator.bdf            ;         ;
+; projeto.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/projeto.bdf               ;         ;
+; fsm.v                            ; yes             ; User Verilog HDL File              ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/fsm.v                     ;         ;
+; regbank.v                        ; yes             ; User Verilog HDL File              ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/regbank.v                 ;         ;
+; teclado.v                        ; yes             ; Auto-Found Verilog HDL File        ; /home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/teclado.v                 ;         ;
+; 74185.bdf                        ; yes             ; Megafunction                       ; /opt/altera/13.0sp1/quartus/libraries/others/maxplus2/74185.bdf                 ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 295    ;
-;                                             ;        ;
-; Total combinational functions               ; 295    ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 191    ;
-;     -- 3 input functions                    ; 51     ;
-;     -- <=2 input functions                  ; 53     ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 260    ;
-;     -- arithmetic mode                      ; 35     ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-;     -- Dedicated logic registers            ; 0      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 74     ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; SW[17] ;
-; Maximum fan-out                             ; 41     ;
-; Total fan-out                               ; 1067   ;
-; Average fan-out                             ; 2.89   ;
-+---------------------------------------------+--------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 707      ;
+;                                             ;          ;
+; Total combinational functions               ; 629      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 281      ;
+;     -- 3 input functions                    ; 186      ;
+;     -- <=2 input functions                  ; 162      ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 494      ;
+;     -- arithmetic mode                      ; 135      ;
+;                                             ;          ;
+; Total registers                             ; 208      ;
+;     -- Dedicated logic registers            ; 208      ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 95       ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 208      ;
+; Total fan-out                               ; 2659     ;
+; Average fan-out                             ; 2.85     ;
++---------------------------------------------+----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Library Name ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
-; |pre_projeto                      ; 295 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |pre_projeto                                                              ; work         ;
-;    |bcd_converter_wrapper:inst10| ; 68 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst10                                 ; work         ;
-;       |bcd_converter:inst5|       ; 53 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst10|bcd_converter:inst5             ; work         ;
-;          |74185:inst2|            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst10|bcd_converter:inst5|74185:inst2 ; work         ;
-;          |74185:inst3|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst10|bcd_converter:inst5|74185:inst3 ; work         ;
-;          |74185:inst|             ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst10|bcd_converter:inst5|74185:inst  ; work         ;
-;       |positive_conv:inst1|       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst10|positive_conv:inst1             ; work         ;
-;    |bcd_converter_wrapper:inst8|  ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst8                                  ; work         ;
-;       |bcd_converter:inst5|       ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst8|bcd_converter:inst5              ; work         ;
-;          |74185:inst2|            ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst8|bcd_converter:inst5|74185:inst2  ; work         ;
-;          |74185:inst3|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst8|bcd_converter:inst5|74185:inst3  ; work         ;
-;          |74185:inst|             ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst8|bcd_converter:inst5|74185:inst   ; work         ;
-;       |positive_conv:inst1|       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst8|positive_conv:inst1              ; work         ;
-;    |bcd_converter_wrapper:inst9|  ; 53 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst9                                  ; work         ;
-;       |bcd_converter:inst5|       ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst9|bcd_converter:inst5              ; work         ;
-;          |74185:inst2|            ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst2  ; work         ;
-;          |74185:inst3|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst3  ; work         ;
-;          |74185:inst|             ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst   ; work         ;
-;       |positive_conv:inst1|       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|bcd_converter_wrapper:inst9|positive_conv:inst1              ; work         ;
-;    |change_sign:inst11|           ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|change_sign:inst11                                           ; work         ;
-;    |process_led:inst19|           ; 89 (89)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|process_led:inst19                                           ; work         ;
-;    |somador:inst|                 ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pre_projeto|somador:inst                                                 ; work         ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                         ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Library Name ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
+; |projeto                                ; 629 (0)           ; 208 (0)      ; 0           ; 0            ; 0       ; 0         ; 95   ; 0            ; |projeto                                                                                               ; work         ;
+;    |calculator:inst|                    ; 250 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst                                                                               ; work         ;
+;       |pre_projeto:inst|                ; 250 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst                                                              ; work         ;
+;          |bcd_converter_wrapper:inst10| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst10                                 ; work         ;
+;             |bcd_converter:inst5|       ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst10|bcd_converter:inst5             ; work         ;
+;                |74185:inst2|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst10|bcd_converter:inst5|74185:inst2 ; work         ;
+;                |74185:inst3|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst10|bcd_converter:inst5|74185:inst3 ; work         ;
+;                |74185:inst|             ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst10|bcd_converter:inst5|74185:inst  ; work         ;
+;             |mux:inst4|                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst10|mux:inst4                       ; work         ;
+;          |bcd_converter_wrapper:inst8|  ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst8                                  ; work         ;
+;             |bcd_converter:inst5|       ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst8|bcd_converter:inst5              ; work         ;
+;                |74185:inst2|            ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst8|bcd_converter:inst5|74185:inst2  ; work         ;
+;                |74185:inst3|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst8|bcd_converter:inst5|74185:inst3  ; work         ;
+;                |74185:inst|             ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst8|bcd_converter:inst5|74185:inst   ; work         ;
+;             |positive_conv:inst1|       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst8|positive_conv:inst1              ; work         ;
+;          |bcd_converter_wrapper:inst9|  ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9                                  ; work         ;
+;             |bcd_converter:inst5|       ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|bcd_converter:inst5              ; work         ;
+;                |74185:inst2|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst2  ; work         ;
+;                |74185:inst3|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst3  ; work         ;
+;                |74185:inst|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst   ; work         ;
+;             |positive_conv:inst1|       ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|positive_conv:inst1              ; work         ;
+;          |change_sign:inst11|           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|change_sign:inst11                                           ; work         ;
+;          |process_led:inst19|           ; 88 (88)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|process_led:inst19                                           ; work         ;
+;          |somador:inst|                 ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|somador:inst                                                 ; work         ;
+;    |fsm:inst25|                         ; 124 (124)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|fsm:inst25                                                                                    ; work         ;
+;    |regbank:inst5|                      ; 28 (28)           ; 80 (80)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|regbank:inst5                                                                                 ; work         ;
+;    |teclado:inst2|                      ; 227 (0)           ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|teclado:inst2                                                                                 ; work         ;
+;       |controlador:U0|                  ; 227 (59)          ; 128 (40)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|teclado:inst2|controlador:U0                                                                  ; work         ;
+;          |Debouncer:d0|                 ; 42 (42)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|teclado:inst2|controlador:U0|Debouncer:d0                                                     ; work         ;
+;          |Debouncer:d1|                 ; 42 (42)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|teclado:inst2|controlador:U0|Debouncer:d1                                                     ; work         ;
+;          |Debouncer:d2|                 ; 42 (42)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|teclado:inst2|controlador:U0|Debouncer:d2                                                     ; work         ;
+;          |Debouncer:d3|                 ; 42 (42)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|teclado:inst2|controlador:U0|Debouncer:d3                                                     ; work         ;
++-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++-----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------+------------------------+
+; fsm:inst25|B[0]                                     ; fsm:inst25|B[7]         ; yes                    ;
+; fsm:inst25|B[6]                                     ; fsm:inst25|B[7]         ; yes                    ;
+; fsm:inst25|B[5]                                     ; fsm:inst25|B[7]         ; yes                    ;
+; fsm:inst25|B[4]                                     ; fsm:inst25|B[7]         ; yes                    ;
+; fsm:inst25|B[3]                                     ; fsm:inst25|B[7]         ; yes                    ;
+; fsm:inst25|B[2]                                     ; fsm:inst25|B[7]         ; yes                    ;
+; fsm:inst25|B[1]                                     ; fsm:inst25|B[7]         ; yes                    ;
+; fsm:inst25|B[7]                                     ; fsm:inst25|B[7]         ; yes                    ;
+; fsm:inst25|A[0]                                     ; fsm:inst25|A[7]         ; yes                    ;
+; fsm:inst25|A[3]                                     ; fsm:inst25|A[7]         ; yes                    ;
+; fsm:inst25|A[2]                                     ; fsm:inst25|A[7]         ; yes                    ;
+; fsm:inst25|A[1]                                     ; fsm:inst25|A[7]         ; yes                    ;
+; fsm:inst25|A[7]                                     ; fsm:inst25|A[7]         ; yes                    ;
+; fsm:inst25|A[6]                                     ; fsm:inst25|A[7]         ; yes                    ;
+; fsm:inst25|A[5]                                     ; fsm:inst25|A[7]         ; yes                    ;
+; fsm:inst25|A[4]                                     ; fsm:inst25|A[7]         ; yes                    ;
+; fsm:inst25|ok                                       ; KEY[0]                  ; yes                    ;
+; fsm:inst25|regadress[3]                             ; fsm:inst25|regadress[3] ; yes                    ;
+; fsm:inst25|regadress[1]                             ; fsm:inst25|regadress[3] ; yes                    ;
+; fsm:inst25|regadress[2]                             ; fsm:inst25|regadress[3] ; yes                    ;
+; fsm:inst25|regadress[0]                             ; fsm:inst25|regadress[3] ; yes                    ;
+; fsm:inst25|regstore[0]                              ; fsm:inst25|regstore[7]  ; yes                    ;
+; fsm:inst25|regwrite                                 ; fsm:inst25|key          ; yes                    ;
+; fsm:inst25|regstore[6]                              ; fsm:inst25|regstore[7]  ; yes                    ;
+; fsm:inst25|regstore[5]                              ; fsm:inst25|regstore[7]  ; yes                    ;
+; fsm:inst25|regstore[4]                              ; fsm:inst25|regstore[7]  ; yes                    ;
+; fsm:inst25|regstore[3]                              ; fsm:inst25|regstore[7]  ; yes                    ;
+; fsm:inst25|regstore[2]                              ; fsm:inst25|regstore[7]  ; yes                    ;
+; fsm:inst25|regstore[1]                              ; fsm:inst25|regstore[7]  ; yes                    ;
+; fsm:inst25|regstore[7]                              ; fsm:inst25|regstore[7]  ; yes                    ;
+; Number of user-specified and inferred latches = 30  ;                         ;                        ;
++-----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -239,24 +301,87 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 208   ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 164   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |pre_projeto|process_led:inst19|led4[5] ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |pre_projeto|process_led:inst19|led1[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; teclado:inst2|controlador:U0|linha[0]  ; 4       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |projeto|teclado:inst2|controlador:U0|Debouncer:d0|Counter[15]       ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |projeto|teclado:inst2|controlador:U0|Debouncer:d1|Counter[18]       ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |projeto|teclado:inst2|controlador:U0|Debouncer:d2|Counter[13]       ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |projeto|teclado:inst2|controlador:U0|Debouncer:d3|Counter[8]        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[9][6]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[8][0]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[7][1]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[6][5]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[5][3]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[4][3]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[3][5]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[2][0]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[1][3]                                ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |projeto|regbank:inst5|bancoreg[0][0]                                ;
+; 256:1              ; 4 bits    ; 680 LEs       ; 40 LEs               ; 640 LEs                ; Yes        ; |projeto|teclado:inst2|controlador:U0|tecla[0]                       ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |projeto|calculator:inst|pre_projeto:inst|process_led:inst19|led6[6] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |projeto|calculator:inst|pre_projeto:inst|process_led:inst19|led0[3] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |projeto|fsm:inst25|Mux4                                             ;
+; 30:1               ; 8 bits    ; 160 LEs       ; 128 LEs              ; 32 LEs                 ; No         ; |projeto|fsm:inst25|Mux8                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "teclado:inst2|controlador:U0|Debouncer:d3" ;
++--------+--------+----------+------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                  ;
++--------+--------+----------+------------------------------------------+
+; oPulse ; Output ; Info     ; Explicitly unconnected                   ;
++--------+--------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "teclado:inst2|controlador:U0|Debouncer:d2" ;
++--------+--------+----------+------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                  ;
++--------+--------+----------+------------------------------------------+
+; oPulse ; Output ; Info     ; Explicitly unconnected                   ;
++--------+--------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "teclado:inst2|controlador:U0|Debouncer:d1" ;
++--------+--------+----------+------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                  ;
++--------+--------+----------+------------------------------------------+
+; oPulse ; Output ; Info     ; Explicitly unconnected                   ;
++--------+--------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "teclado:inst2|controlador:U0|Debouncer:d0" ;
++--------+--------+----------+------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                  ;
++--------+--------+----------+------------------------------------------+
+; oPulse ; Output ; Info     ; Explicitly unconnected                   ;
++--------+--------+----------+------------------------------------------+
 
 
 +-------------------------------+
@@ -264,7 +389,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -274,7 +399,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Oct 30 17:59:01 2019
+    Info: Processing started: Tue Dec  3 20:53:52 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off socorro -c socorro
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file pre_projeto.bdf
@@ -294,41 +419,183 @@ Info (12021): Found 1 design units, including 1 entities, in source file bcd_con
     Info (12023): Found entity 1: bcd_converter_wrapper
 Info (12021): Found 1 design units, including 1 entities, in source file change_sign.v
     Info (12023): Found entity 1: change_sign
-Info (12127): Elaborating entity "pre_projeto" for the top level hierarchy
-Info (12128): Elaborating entity "process_led" for hierarchy "process_led:inst19"
-Warning (10230): Verilog HDL assignment warning at leddie.v(33): truncated value with size 28 to match size of target (7)
-Info (12128): Elaborating entity "change_sign" for hierarchy "change_sign:inst11"
-Warning (10230): Verilog HDL assignment warning at change_sign.v(7): truncated value with size 32 to match size of target (8)
-Info (12128): Elaborating entity "somador" for hierarchy "somador:inst"
+Info (12021): Found 1 design units, including 1 entities, in source file concat.sv
+    Info (12023): Found entity 1: concat
+Info (12021): Found 1 design units, including 1 entities, in source file calculator.bdf
+    Info (12023): Found entity 1: calculator
+Info (12021): Found 1 design units, including 1 entities, in source file projeto.bdf
+    Info (12023): Found entity 1: projeto
+Warning (12019): Can't analyze file -- file fsm.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file fsm.v
+    Info (12023): Found entity 1: fsm
+Info (12021): Found 1 design units, including 1 entities, in source file regbank.v
+    Info (12023): Found entity 1: regbank
+Info (12127): Elaborating entity "projeto" for the top level hierarchy
+Warning (12125): Using design file teclado.v, which is not specified as a design file for the current project, but contains definitions for 3 design units and 3 entities in project
+    Info (12023): Found entity 1: teclado
+    Info (12023): Found entity 2: controlador
+    Info (12023): Found entity 3: Debouncer
+Info (12128): Elaborating entity "teclado" for hierarchy "teclado:inst2"
+Info (12128): Elaborating entity "controlador" for hierarchy "teclado:inst2|controlador:U0"
+Info (12128): Elaborating entity "Debouncer" for hierarchy "teclado:inst2|controlador:U0|Debouncer:d0"
+Info (12128): Elaborating entity "calculator" for hierarchy "calculator:inst"
+Info (12128): Elaborating entity "pre_projeto" for hierarchy "calculator:inst|pre_projeto:inst"
+Info (12128): Elaborating entity "somador" for hierarchy "calculator:inst|pre_projeto:inst|somador:inst"
 Warning (10036): Verilog HDL or VHDL warning at adder.v(8): object "Cout" assigned a value but never read
 Warning (10230): Verilog HDL assignment warning at adder.v(10): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at adder.v(12): truncated value with size 32 to match size of target (1)
-Info (12128): Elaborating entity "bcd_converter_wrapper" for hierarchy "bcd_converter_wrapper:inst9"
-Info (12128): Elaborating entity "bcd_converter" for hierarchy "bcd_converter_wrapper:inst9|bcd_converter:inst5"
-Info (12128): Elaborating entity "74185" for hierarchy "bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst2"
-Info (12130): Elaborated megafunction instantiation "bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst2"
-Info (12128): Elaborating entity "mux" for hierarchy "bcd_converter_wrapper:inst9|mux:inst4"
-Info (12128): Elaborating entity "positive_conv" for hierarchy "bcd_converter_wrapper:inst9|positive_conv:inst1"
+Info (12128): Elaborating entity "process_led" for hierarchy "calculator:inst|pre_projeto:inst|process_led:inst19"
+Warning (10230): Verilog HDL assignment warning at leddie.v(33): truncated value with size 28 to match size of target (7)
+Info (12128): Elaborating entity "change_sign" for hierarchy "calculator:inst|pre_projeto:inst|change_sign:inst11"
+Warning (10230): Verilog HDL assignment warning at change_sign.v(7): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "bcd_converter_wrapper" for hierarchy "calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9"
+Info (12128): Elaborating entity "bcd_converter" for hierarchy "calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|bcd_converter:inst5"
+Info (12128): Elaborating entity "74185" for hierarchy "calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst2"
+Info (12130): Elaborated megafunction instantiation "calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|bcd_converter:inst5|74185:inst2"
+Info (12128): Elaborating entity "mux" for hierarchy "calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|mux:inst4"
+Info (12128): Elaborating entity "positive_conv" for hierarchy "calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|positive_conv:inst1"
 Warning (10230): Verilog HDL assignment warning at positive.v(7): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "concat" for hierarchy "calculator:inst|concat:inst2"
+Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst25"
+Warning (10230): Verilog HDL assignment warning at fsm.v(71): truncated value with size 8 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at fsm.v(85): truncated value with size 8 to match size of target (4)
+Warning (10240): Verilog HDL Always Construct warning at fsm.v(20): inferring latch(es) for variable "A", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fsm.v(20): inferring latch(es) for variable "B", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fsm.v(20): inferring latch(es) for variable "ok", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fsm.v(20): inferring latch(es) for variable "regwrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fsm.v(20): inferring latch(es) for variable "regadress", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fsm.v(20): inferring latch(es) for variable "regstore", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at fsm.v(20): inferring latch(es) for variable "subtract", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "subtract" at fsm.v(26)
+Info (10041): Inferred latch for "regstore[0]" at fsm.v(26)
+Info (10041): Inferred latch for "regstore[1]" at fsm.v(26)
+Info (10041): Inferred latch for "regstore[2]" at fsm.v(26)
+Info (10041): Inferred latch for "regstore[3]" at fsm.v(26)
+Info (10041): Inferred latch for "regstore[4]" at fsm.v(26)
+Info (10041): Inferred latch for "regstore[5]" at fsm.v(26)
+Info (10041): Inferred latch for "regstore[6]" at fsm.v(26)
+Info (10041): Inferred latch for "regstore[7]" at fsm.v(26)
+Info (10041): Inferred latch for "regadress[0]" at fsm.v(26)
+Info (10041): Inferred latch for "regadress[1]" at fsm.v(26)
+Info (10041): Inferred latch for "regadress[2]" at fsm.v(26)
+Info (10041): Inferred latch for "regadress[3]" at fsm.v(26)
+Info (10041): Inferred latch for "regwrite" at fsm.v(26)
+Info (10041): Inferred latch for "ok" at fsm.v(26)
+Info (10041): Inferred latch for "B[0]" at fsm.v(26)
+Info (10041): Inferred latch for "B[1]" at fsm.v(26)
+Info (10041): Inferred latch for "B[2]" at fsm.v(26)
+Info (10041): Inferred latch for "B[3]" at fsm.v(26)
+Info (10041): Inferred latch for "B[4]" at fsm.v(26)
+Info (10041): Inferred latch for "B[5]" at fsm.v(26)
+Info (10041): Inferred latch for "B[6]" at fsm.v(26)
+Info (10041): Inferred latch for "B[7]" at fsm.v(26)
+Info (10041): Inferred latch for "A[0]" at fsm.v(26)
+Info (10041): Inferred latch for "A[1]" at fsm.v(26)
+Info (10041): Inferred latch for "A[2]" at fsm.v(26)
+Info (10041): Inferred latch for "A[3]" at fsm.v(26)
+Info (10041): Inferred latch for "A[4]" at fsm.v(26)
+Info (10041): Inferred latch for "A[5]" at fsm.v(26)
+Info (10041): Inferred latch for "A[6]" at fsm.v(26)
+Info (10041): Inferred latch for "A[7]" at fsm.v(26)
+Info (12128): Elaborating entity "regbank" for hierarchy "regbank:inst5"
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[25]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[23]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[21]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[19]" and its non-tri-state driver.
+Warning (13039): The following bidir pins have no drivers
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+    Warning (13040): Bidir "GPIO_1" has no driver
+Warning (13012): Latch fsm:inst25|B[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[0]
+Warning (13012): Latch fsm:inst25|B[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|B[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[3]
+Warning (13012): Latch fsm:inst25|B[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[0]
+Warning (13012): Latch fsm:inst25|B[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[3]
+Warning (13012): Latch fsm:inst25|B[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|B[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[1]
+Warning (13012): Latch fsm:inst25|B[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|A[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|A[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|A[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|A[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|A[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[7]
+Warning (13012): Latch fsm:inst25|A[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[6]
+Warning (13012): Latch fsm:inst25|A[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|A[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
+Warning (13012): Latch fsm:inst25|regadress[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[3]
+Warning (13012): Latch fsm:inst25|regadress[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[1]
+Warning (13012): Latch fsm:inst25|regadress[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[2]
+Warning (13012): Latch fsm:inst25|regstore[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|A[7]
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "GPIO_1~synth"
+    Warning (13010): Node "GPIO_1~synth"
+    Warning (13010): Node "GPIO_1~synth"
+    Warning (13010): Node "GPIO_1~synth"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[2]" is stuck at VCC
     Warning (13410): Pin "HEX3[1]" is stuck at VCC
-    Warning (13410): Pin "HEX7[5]" is stuck at VCC
-    Warning (13410): Pin "HEX7[4]" is stuck at VCC
-    Warning (13410): Pin "HEX7[3]" is stuck at VCC
-    Warning (13410): Pin "HEX7[2]" is stuck at VCC
-    Warning (13410): Pin "HEX7[1]" is stuck at VCC
-    Warning (13410): Pin "HEX7[0]" is stuck at VCC
+    Warning (13410): Pin "HEX6[1]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 369 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 295 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4605 megabytes
-    Info: Processing ended: Wed Oct 30 17:59:04 2019
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info (21057): Implemented 810 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 57 output pins
+    Info (21060): Implemented 36 bidirectional pins
+    Info (21061): Implemented 715 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 106 warnings
+    Info: Peak virtual memory: 593 megabytes
+    Info: Processing ended: Tue Dec  3 20:54:01 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 

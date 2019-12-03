@@ -1,0 +1,120 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 192 240)
+	(text "pre_projeto" (rect 5 0 75 16)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 207 29 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "SW[16]" (rect 0 0 42 16)(font "Arial" (font_size 8)))
+		(text "SW[16]" (rect 21 27 63 43)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "SW[15..0]" (rect 0 0 56 16)(font "Arial" (font_size 8)))
+		(text "SW[15..0]" (rect 21 43 77 59)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "SW[17]" (rect 0 0 42 16)(font "Arial" (font_size 8)))
+		(text "SW[17]" (rect 21 59 63 75)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "result[7..0]" (rect 0 0 64 16)(font "Arial" (font_size 8)))
+		(text "result[7..0]" (rect 91 27 155 43)(font "Arial" (font_size 8)))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(port
+		(pt 176 48)
+		(output)
+		(text "HEX0[6..0]" (rect 0 0 61 16)(font "Arial" (font_size 8)))
+		(text "HEX0[6..0]" (rect 94 43 155 59)(font "Arial" (font_size 8)))
+		(line (pt 176 48)(pt 160 48)(line_width 3))
+	)
+	(port
+		(pt 176 64)
+		(output)
+		(text "HEX1[6..0]" (rect 0 0 61 16)(font "Arial" (font_size 8)))
+		(text "HEX1[6..0]" (rect 94 59 155 75)(font "Arial" (font_size 8)))
+		(line (pt 176 64)(pt 160 64)(line_width 3))
+	)
+	(port
+		(pt 176 80)
+		(output)
+		(text "HEX2[6..0]" (rect 0 0 61 16)(font "Arial" (font_size 8)))
+		(text "HEX2[6..0]" (rect 94 75 155 91)(font "Arial" (font_size 8)))
+		(line (pt 176 80)(pt 160 80)(line_width 3))
+	)
+	(port
+		(pt 176 96)
+		(output)
+		(text "HEX3[6..0]" (rect 0 0 61 16)(font "Arial" (font_size 8)))
+		(text "HEX3[6..0]" (rect 94 91 155 107)(font "Arial" (font_size 8)))
+		(line (pt 176 96)(pt 160 96)(line_width 3))
+	)
+	(port
+		(pt 176 112)
+		(output)
+		(text "HEX4[6..0]" (rect 0 0 61 16)(font "Arial" (font_size 8)))
+		(text "HEX4[6..0]" (rect 94 107 155 123)(font "Arial" (font_size 8)))
+		(line (pt 176 112)(pt 160 112)(line_width 3))
+	)
+	(port
+		(pt 176 128)
+		(output)
+		(text "HEX5[6..0]" (rect 0 0 61 16)(font "Arial" (font_size 8)))
+		(text "HEX5[6..0]" (rect 94 123 155 139)(font "Arial" (font_size 8)))
+		(line (pt 176 128)(pt 160 128)(line_width 3))
+	)
+	(port
+		(pt 176 144)
+		(output)
+		(text "HEX6[6..0]" (rect 0 0 61 16)(font "Arial" (font_size 8)))
+		(text "HEX6[6..0]" (rect 94 139 155 155)(font "Arial" (font_size 8)))
+		(line (pt 176 144)(pt 160 144)(line_width 3))
+	)
+	(port
+		(pt 176 160)
+		(output)
+		(text "HEX7[6..0]" (rect 0 0 61 16)(font "Arial" (font_size 8)))
+		(text "HEX7[6..0]" (rect 94 155 155 171)(font "Arial" (font_size 8)))
+		(line (pt 176 160)(pt 160 160)(line_width 3))
+	)
+	(port
+		(pt 176 176)
+		(output)
+		(text "overflow" (rect 0 0 54 16)(font "Arial" (font_size 8)))
+		(text "overflow" (rect 101 171 155 187)(font "Arial" (font_size 8)))
+		(line (pt 176 176)(pt 160 176))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 208))
+	)
+)

@@ -52,6 +52,6 @@ assign entr1 = {(negativeB ? 7'b0111111 : 7'b1111111),
 					bcd_to_led(B[7], B[6], B[5], B[4]),
 					bcd_to_led(B[3], B[2], B[1], B[0])};
 assign {led3, led2, led1, led0} = {(key && overflow) ? error : (key ? bcd : entr1)};
-assign {led7, led6, led5, led4} = {(key && overflow) ? { 4{7'b1111111} } : (key ? { 4 {7'b1111111} } : entr0)};
+assign {led7, led6, led5, led4} = {(key && overflow) ? { 4{7'b1000000} } : (key ? { 4 {7'b1000000} } : entr0)};
 
 endmodule

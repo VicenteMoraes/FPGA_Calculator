@@ -79,11 +79,30 @@ R9
 !i10b 1
 !s85 0
 !s101 -O0
+vcalculator
+!i10b 1
+!s100 H48Zz>kO;^Q[9E]K18J9c3
+I<B3AJ[:hf_cdVSYQQjET53
+V9;1<j=EKA1Caz[X19FQOX1
+Z29 d/home/vic/Projects/Classes/CL/Projeto/FPGA_Calculator/simulation/qsim
+w1575389729
+R5
+R6
+L0 31
+R7
+r1
+!s85 0
+31
+!s108 1575389731.998237
+!s107 socorro.vo|
+R8
+!s101 -O0
+R9
 vpre_projeto
-Z29 IlQh=b1n`VBN9`1jI88Vk@3
-Z30 VdGn?<34]7z35KIzL9zjek0
-Z31 dC:\Users\aluno\Documents\SOMADOR-20191030T154905Z-001\SOMADOR\simulation\qsim
-Z32 w1572468759
+Z30 Iz6?IcdZjMMCU^ihkPli491
+Z31 VNb9:b>2A1ioU99_U?nQ`l1
+R29
+Z32 w1572637237
 R5
 R6
 L0 31
@@ -92,66 +111,66 @@ r1
 31
 R8
 R9
-!i10b 1
-Z33 !s100 oX=V@6Gl]jCB?]??ob18f0
-!s85 0
-Z34 !s108 1572468760.695000
+Z33 !s100 2f[6zHMCKJV0TI^Rg3b242
+Z34 !s108 1572637239.697662
 R12
+!i10b 1
+!s85 0
 !s101 -O0
 vpre_projeto_vlg_check_tst
-!i10b 1
-!s100 VQFR7c@YeU]B@X]bf2JID2
-I7Fd>QjNNLVjSTOj36`YJ;1
-VRNW^D_5i[`4=m]f:E]d;C2
-R31
-R32
+Z35 !s100 5PFkEFQNU;9<09LJ=:RSj0
+Z36 I_mFSao1o^``go4`bU=iZC0
+Z37 VGP7=MIboEPQQHcNPjcDFA2
+R29
+Z38 w1572637233
 R17
 R18
 L0 57
 R7
 r1
-!s85 0
 31
-Z35 !s108 1572468760.930000
-Z36 !s107 socorro.vt|
+Z39 !s108 1572637239.958465
+R20
 R21
-!s101 -O0
 R9
-vpre_projeto_vlg_sample_tst
 !i10b 1
-Z37 !s100 2f4aj;C0=m]i3iGbMlDGA2
-Z38 I;l7XKLNUlZez0J2[e@>ea2
-Z39 VWGQRkhJJC51zL`E;`NeA31
-R31
-R32
+!s85 0
+!s101 -O0
+vpre_projeto_vlg_sample_tst
+Z40 !s100 2f4aj;C0=m]i3iGbMlDGA2
+Z41 I;l7XKLNUlZez0J2[e@>ea2
+Z42 VWGQRkhJJC51zL`E;`NeA31
+R29
+R38
 R17
 R18
 L0 29
 R7
 r1
-!s85 0
 31
-R35
-R36
+R39
+R20
 R21
-!s101 -O0
 R9
-vpre_projeto_vlg_vec_tst
 !i10b 1
-!s100 TO[HAS7k2Qn2f^Dec9Rj]3
-I0JT]VhYbi8@:68=aHX_NE0
-Z40 V9KB7_0[`V7L^aC^QjA::J1
-R31
-R32
+!s85 0
+!s101 -O0
+vpre_projeto_vlg_vec_tst
+Z43 !s100 cS9H?BW1S4R=zNWc1ATQk0
+Z44 Id4ad7O>_XNN]^iH83=ZL42
+Z45 V9KB7_0[`V7L^aC^QjA::J1
+R29
+R38
 R17
 R18
-L0 469
+Z46 L0 1197
 R7
 r1
-!s85 0
 31
-R35
-R36
+R39
+R20
 R21
-!s101 -O0
 R9
+!i10b 1
+!s85 0
+!s101 -O0
