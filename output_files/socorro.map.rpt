@@ -1,5 +1,5 @@
 Analysis & Synthesis report for socorro
-Tue Dec  3 20:54:01 2019
+Wed Dec  4 07:42:22 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,13 +48,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec  3 20:54:01 2019           ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec  4 07:42:22 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; socorro                                         ;
 ; Top-level Entity Name              ; projeto                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 707                                             ;
-;     Total combinational functions  ; 629                                             ;
+; Total logic elements               ; 706                                             ;
+;     Total combinational functions  ; 628                                             ;
 ;     Dedicated logic registers      ; 208                                             ;
 ; Total registers                    ; 208                                             ;
 ; Total pins                         ; 95                                              ;
@@ -190,16 +190,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 707      ;
+; Estimated Total logic elements              ; 706      ;
 ;                                             ;          ;
-; Total combinational functions               ; 629      ;
+; Total combinational functions               ; 628      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 281      ;
+;     -- 4 input functions                    ; 280      ;
 ;     -- 3 input functions                    ; 186      ;
 ;     -- <=2 input functions                  ; 162      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 494      ;
+;     -- normal mode                          ; 493      ;
 ;     -- arithmetic mode                      ; 135      ;
 ;                                             ;          ;
 ; Total registers                             ; 208      ;
@@ -210,7 +210,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
 ; Maximum fan-out                             ; 208      ;
-; Total fan-out                               ; 2659     ;
+; Total fan-out                               ; 2655     ;
 ; Average fan-out                             ; 2.85     ;
 +---------------------------------------------+----------+
 
@@ -220,7 +220,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Library Name ;
 +-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
-; |projeto                                ; 629 (0)           ; 208 (0)      ; 0           ; 0            ; 0       ; 0         ; 95   ; 0            ; |projeto                                                                                               ; work         ;
+; |projeto                                ; 628 (0)           ; 208 (0)      ; 0           ; 0            ; 0       ; 0         ; 95   ; 0            ; |projeto                                                                                               ; work         ;
 ;    |calculator:inst|                    ; 250 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst                                                                               ; work         ;
 ;       |pre_projeto:inst|                ; 250 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst                                                              ; work         ;
 ;          |bcd_converter_wrapper:inst10| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst10                                 ; work         ;
@@ -244,7 +244,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |change_sign:inst11|           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|change_sign:inst11                                           ; work         ;
 ;          |process_led:inst19|           ; 88 (88)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|process_led:inst19                                           ; work         ;
 ;          |somador:inst|                 ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|calculator:inst|pre_projeto:inst|somador:inst                                                 ; work         ;
-;    |fsm:inst25|                         ; 124 (124)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|fsm:inst25                                                                                    ; work         ;
+;    |fsm:inst1|                          ; 123 (123)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|fsm:inst1                                                                                     ; work         ;
 ;    |regbank:inst5|                      ; 28 (28)           ; 80 (80)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|regbank:inst5                                                                                 ; work         ;
 ;    |teclado:inst2|                      ; 227 (0)           ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|teclado:inst2                                                                                 ; work         ;
 ;       |controlador:U0|                  ; 227 (59)          ; 128 (40)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |projeto|teclado:inst2|controlador:U0                                                                  ; work         ;
@@ -256,43 +256,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                    ;
-+-----------------------------------------------------+-------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
-+-----------------------------------------------------+-------------------------+------------------------+
-; fsm:inst25|B[0]                                     ; fsm:inst25|B[7]         ; yes                    ;
-; fsm:inst25|B[6]                                     ; fsm:inst25|B[7]         ; yes                    ;
-; fsm:inst25|B[5]                                     ; fsm:inst25|B[7]         ; yes                    ;
-; fsm:inst25|B[4]                                     ; fsm:inst25|B[7]         ; yes                    ;
-; fsm:inst25|B[3]                                     ; fsm:inst25|B[7]         ; yes                    ;
-; fsm:inst25|B[2]                                     ; fsm:inst25|B[7]         ; yes                    ;
-; fsm:inst25|B[1]                                     ; fsm:inst25|B[7]         ; yes                    ;
-; fsm:inst25|B[7]                                     ; fsm:inst25|B[7]         ; yes                    ;
-; fsm:inst25|A[0]                                     ; fsm:inst25|A[7]         ; yes                    ;
-; fsm:inst25|A[3]                                     ; fsm:inst25|A[7]         ; yes                    ;
-; fsm:inst25|A[2]                                     ; fsm:inst25|A[7]         ; yes                    ;
-; fsm:inst25|A[1]                                     ; fsm:inst25|A[7]         ; yes                    ;
-; fsm:inst25|A[7]                                     ; fsm:inst25|A[7]         ; yes                    ;
-; fsm:inst25|A[6]                                     ; fsm:inst25|A[7]         ; yes                    ;
-; fsm:inst25|A[5]                                     ; fsm:inst25|A[7]         ; yes                    ;
-; fsm:inst25|A[4]                                     ; fsm:inst25|A[7]         ; yes                    ;
-; fsm:inst25|ok                                       ; KEY[0]                  ; yes                    ;
-; fsm:inst25|regadress[3]                             ; fsm:inst25|regadress[3] ; yes                    ;
-; fsm:inst25|regadress[1]                             ; fsm:inst25|regadress[3] ; yes                    ;
-; fsm:inst25|regadress[2]                             ; fsm:inst25|regadress[3] ; yes                    ;
-; fsm:inst25|regadress[0]                             ; fsm:inst25|regadress[3] ; yes                    ;
-; fsm:inst25|regstore[0]                              ; fsm:inst25|regstore[7]  ; yes                    ;
-; fsm:inst25|regwrite                                 ; fsm:inst25|key          ; yes                    ;
-; fsm:inst25|regstore[6]                              ; fsm:inst25|regstore[7]  ; yes                    ;
-; fsm:inst25|regstore[5]                              ; fsm:inst25|regstore[7]  ; yes                    ;
-; fsm:inst25|regstore[4]                              ; fsm:inst25|regstore[7]  ; yes                    ;
-; fsm:inst25|regstore[3]                              ; fsm:inst25|regstore[7]  ; yes                    ;
-; fsm:inst25|regstore[2]                              ; fsm:inst25|regstore[7]  ; yes                    ;
-; fsm:inst25|regstore[1]                              ; fsm:inst25|regstore[7]  ; yes                    ;
-; fsm:inst25|regstore[7]                              ; fsm:inst25|regstore[7]  ; yes                    ;
-; Number of user-specified and inferred latches = 30  ;                         ;                        ;
-+-----------------------------------------------------+-------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                   ;
++-----------------------------------------------------+------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal    ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------+------------------------+
+; fsm:inst1|B[0]                                      ; fsm:inst1|B[7]         ; yes                    ;
+; fsm:inst1|B[6]                                      ; fsm:inst1|B[7]         ; yes                    ;
+; fsm:inst1|B[5]                                      ; fsm:inst1|B[7]         ; yes                    ;
+; fsm:inst1|B[4]                                      ; fsm:inst1|B[7]         ; yes                    ;
+; fsm:inst1|B[3]                                      ; fsm:inst1|B[7]         ; yes                    ;
+; fsm:inst1|B[2]                                      ; fsm:inst1|B[7]         ; yes                    ;
+; fsm:inst1|B[1]                                      ; fsm:inst1|B[7]         ; yes                    ;
+; fsm:inst1|B[7]                                      ; fsm:inst1|B[7]         ; yes                    ;
+; fsm:inst1|A[0]                                      ; fsm:inst1|A[7]         ; yes                    ;
+; fsm:inst1|A[3]                                      ; fsm:inst1|A[7]         ; yes                    ;
+; fsm:inst1|A[2]                                      ; fsm:inst1|A[7]         ; yes                    ;
+; fsm:inst1|A[1]                                      ; fsm:inst1|A[7]         ; yes                    ;
+; fsm:inst1|A[7]                                      ; fsm:inst1|A[7]         ; yes                    ;
+; fsm:inst1|A[6]                                      ; fsm:inst1|A[7]         ; yes                    ;
+; fsm:inst1|A[5]                                      ; fsm:inst1|A[7]         ; yes                    ;
+; fsm:inst1|A[4]                                      ; fsm:inst1|A[7]         ; yes                    ;
+; fsm:inst1|ok                                        ; KEY[0]                 ; yes                    ;
+; fsm:inst1|regadress[3]                              ; fsm:inst1|regadress[3] ; yes                    ;
+; fsm:inst1|regadress[1]                              ; fsm:inst1|regadress[3] ; yes                    ;
+; fsm:inst1|regadress[2]                              ; fsm:inst1|regadress[3] ; yes                    ;
+; fsm:inst1|regadress[0]                              ; fsm:inst1|regadress[3] ; yes                    ;
+; fsm:inst1|regstore[0]                               ; fsm:inst1|regstore[7]  ; yes                    ;
+; fsm:inst1|regwrite                                  ; fsm:inst1|key          ; yes                    ;
+; fsm:inst1|regstore[6]                               ; fsm:inst1|regstore[7]  ; yes                    ;
+; fsm:inst1|regstore[5]                               ; fsm:inst1|regstore[7]  ; yes                    ;
+; fsm:inst1|regstore[4]                               ; fsm:inst1|regstore[7]  ; yes                    ;
+; fsm:inst1|regstore[3]                               ; fsm:inst1|regstore[7]  ; yes                    ;
+; fsm:inst1|regstore[2]                               ; fsm:inst1|regstore[7]  ; yes                    ;
+; fsm:inst1|regstore[1]                               ; fsm:inst1|regstore[7]  ; yes                    ;
+; fsm:inst1|regstore[7]                               ; fsm:inst1|regstore[7]  ; yes                    ;
+; Number of user-specified and inferred latches = 30  ;                        ;                        ;
++-----------------------------------------------------+------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -343,8 +343,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 256:1              ; 4 bits    ; 680 LEs       ; 40 LEs               ; 640 LEs                ; Yes        ; |projeto|teclado:inst2|controlador:U0|tecla[0]                       ;
 ; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |projeto|calculator:inst|pre_projeto:inst|process_led:inst19|led6[6] ;
 ; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |projeto|calculator:inst|pre_projeto:inst|process_led:inst19|led0[3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |projeto|fsm:inst25|Mux4                                             ;
-; 30:1               ; 8 bits    ; 160 LEs       ; 128 LEs              ; 32 LEs                 ; No         ; |projeto|fsm:inst25|Mux8                                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |projeto|fsm:inst1|Mux4                                              ;
+; 30:1               ; 8 bits    ; 160 LEs       ; 128 LEs              ; 32 LEs                 ; No         ; |projeto|fsm:inst1|Mux8                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
 
@@ -389,7 +389,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -399,7 +399,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec  3 20:53:52 2019
+    Info: Processing started: Wed Dec  4 07:42:13 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off socorro -c socorro
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file pre_projeto.bdf
@@ -456,7 +456,7 @@ Info (12128): Elaborating entity "mux" for hierarchy "calculator:inst|pre_projet
 Info (12128): Elaborating entity "positive_conv" for hierarchy "calculator:inst|pre_projeto:inst|bcd_converter_wrapper:inst9|positive_conv:inst1"
 Warning (10230): Verilog HDL assignment warning at positive.v(7): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "concat" for hierarchy "calculator:inst|concat:inst2"
-Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst25"
+Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst1"
 Warning (10230): Verilog HDL assignment warning at fsm.v(71): truncated value with size 8 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at fsm.v(85): truncated value with size 8 to match size of target (4)
 Warning (10240): Verilog HDL Always Construct warning at fsm.v(20): inferring latch(es) for variable "A", which holds its previous value in one or more paths through the always construct
@@ -536,46 +536,46 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "GPIO_1" has no driver
     Warning (13040): Bidir "GPIO_1" has no driver
     Warning (13040): Bidir "GPIO_1" has no driver
-Warning (13012): Latch fsm:inst25|B[0] has unsafe behavior
+Warning (13012): Latch fsm:inst1|B[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[0]
-Warning (13012): Latch fsm:inst25|B[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|B[5] has unsafe behavior
+Warning (13012): Latch fsm:inst1|B[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[3]
-Warning (13012): Latch fsm:inst25|B[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[0]
-Warning (13012): Latch fsm:inst25|B[3] has unsafe behavior
+Warning (13012): Latch fsm:inst1|B[5] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[3]
-Warning (13012): Latch fsm:inst25|B[2] has unsafe behavior
+Warning (13012): Latch fsm:inst1|B[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[3]
+Warning (13012): Latch fsm:inst1|B[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[3]
+Warning (13012): Latch fsm:inst1|B[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|B[1] has unsafe behavior
+Warning (13012): Latch fsm:inst1|B[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[1]
-Warning (13012): Latch fsm:inst25|B[7] has unsafe behavior
+Warning (13012): Latch fsm:inst1|B[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[3]
+Warning (13012): Latch fsm:inst1|A[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|A[0] has unsafe behavior
+Warning (13012): Latch fsm:inst1|A[3] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|A[3] has unsafe behavior
+Warning (13012): Latch fsm:inst1|A[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|A[2] has unsafe behavior
+Warning (13012): Latch fsm:inst1|A[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|A[1] has unsafe behavior
+Warning (13012): Latch fsm:inst1|A[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst1|B[7]
+Warning (13012): Latch fsm:inst1|A[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|A[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[7]
-Warning (13012): Latch fsm:inst25|A[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[6]
-Warning (13012): Latch fsm:inst25|A[5] has unsafe behavior
+Warning (13012): Latch fsm:inst1|A[5] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|A[4] has unsafe behavior
+Warning (13012): Latch fsm:inst1|A[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal teclado:inst2|controlador:U0|tecla[2]
-Warning (13012): Latch fsm:inst25|regadress[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[3]
-Warning (13012): Latch fsm:inst25|regadress[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[1]
-Warning (13012): Latch fsm:inst25|regadress[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|B[2]
-Warning (13012): Latch fsm:inst25|regstore[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst25|A[7]
+Warning (13012): Latch fsm:inst1|regadress[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst1|B[3]
+Warning (13012): Latch fsm:inst1|regadress[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst1|B[1]
+Warning (13012): Latch fsm:inst1|regadress[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst1|B[2]
+Warning (13012): Latch fsm:inst1|regstore[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fsm:inst1|A[7]
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "GPIO_1~synth"
     Warning (13010): Node "GPIO_1~synth"
@@ -587,15 +587,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX6[1]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 810 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 809 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 57 output pins
     Info (21060): Implemented 36 bidirectional pins
-    Info (21061): Implemented 715 logic cells
+    Info (21061): Implemented 714 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 106 warnings
     Info: Peak virtual memory: 593 megabytes
-    Info: Processing ended: Tue Dec  3 20:54:01 2019
+    Info: Processing ended: Wed Dec  4 07:42:22 2019
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 

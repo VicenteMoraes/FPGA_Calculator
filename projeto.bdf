@@ -40,7 +40,7 @@ applicable agreement for further details.
 	(input)
 	(rect 32 160 200 176)
 	(text "INPUT" (rect 125 0 155 12)(font "Arial" (font_size 6)))
-	(text "KEY[0]" (rect 5 0 40 13)(font "Arial" ))
+	(text "KEY[0]" (rect 5 0 39 13)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -419,7 +419,7 @@ applicable agreement for further details.
 (symbol
 	(rect 520 120 736 296)
 	(text "fsm" (rect 5 0 26 13)(font "Arial" ))
-	(text "inst25" (rect 8 160 42 173)(font "Arial" ))
+	(text "inst1" (rect 8 160 33 173)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)

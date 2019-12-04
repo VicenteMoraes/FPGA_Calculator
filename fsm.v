@@ -19,8 +19,8 @@ always @(*)
 begin
 	if (reset)
 	begin
-		A = {7{1'b0}};
-		B = {7{1'b0}};
+		A = 0;
+		B = 0;
 		key = 1;
 	end
 	else if (overflow)
@@ -34,22 +34,22 @@ begin
 		ok = 1;
 		regwrite = 0;
 		case (tecla)
-			4'b0000 : B = 7'b0000000; 
-			4'b0001 : B = 7'b0000001;
-			4'b0010 : B = 7'b0000010; 
-			4'b0011 : B = 7'b0000011; 
-			4'b0100 : B = 7'b0000100; 
-			4'b0101 : B = 7'b0000101; 
-			4'b0110 : B = 7'b0010110; 
-			4'b0111 : B = 7'b0000111; 
-			4'b1000 : B = 7'b0011000; 
-			4'b1001 : B = 7'b0001001;
+			4'b0000 : B = 8'b00000000; 
+			4'b0001 : B = 8'b00000001;
+			4'b0010 : B = 8'b00000010; 
+			4'b0011 : B = 8'b00000011; 
+			4'b0100 : B = 8'b00000100; 
+			4'b0101 : B = 8'b00000101; 
+			4'b0110 : B = 8'b00000110; 
+			4'b0111 : B = 8'b00000111; 
+			4'b1000 : B = 8'b00001000; 
+			4'b1001 : B = 8'b00001001;
 			
 			// Sum operation:
 			4'b1010 : begin
 				key = 1;
 				B = calcresult;
-				A = {7{1'b0}};
+				A = 0;
 			end
 			
 			// Subtract operation
@@ -57,14 +57,14 @@ begin
 				subtract = 1;
 				key = 1;
 				B = calcresult;
-				A = {7{1'b0}};
+				A = 0;
 			end
 			
 			// Store operation
 			4'b1100 : begin
 				if (B > 9) begin
-					A = 7'b0111111;
-					B = 7'b0111111;
+					A = 8'b01111111;
+					B = 8'b01111111;
 					key = 1;
 				end
 				else begin
@@ -77,8 +77,8 @@ begin
 			// Load operation
 			4'b1101 : begin
 				if (B > 9) begin
-					A = 7'b0111111;
-					B = 7'b0111111;
+					A = 8'b01111111;
+					B = 8'b01111111;
 					key = 1;
 				end
 				else begin
@@ -88,9 +88,9 @@ begin
 			end
 			
 			// Enter operation (copies queue[0] - B into queue[1] - A)
-			4'b1110 : begin
-				A = B;
-			end
+			4'b1110 : A = B;
+			
+			// Does nothing
 			4'b1111 : ok = 1; 
 			default: ok = 0;
 		endcase

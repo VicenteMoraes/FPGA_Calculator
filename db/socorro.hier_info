@@ -44,7 +44,7 @@ HEX0[3] <= calculator:inst.HEX0[3]
 HEX0[4] <= calculator:inst.HEX0[4]
 HEX0[5] <= calculator:inst.HEX0[5]
 HEX0[6] <= calculator:inst.HEX0[6]
-KEY[0] => fsm:inst25.reset
+KEY[0] => fsm:inst1.reset
 KEY[0] => regbank:inst5.reset
 HEX1[0] <= calculator:inst.HEX1[0]
 HEX1[1] <= calculator:inst.HEX1[1]
@@ -95,7 +95,7 @@ HEX7[3] <= calculator:inst.HEX7[3]
 HEX7[4] <= calculator:inst.HEX7[4]
 HEX7[5] <= calculator:inst.HEX7[5]
 HEX7[6] <= calculator:inst.HEX7[6]
-LEDG[8] <= fsm:inst25.ok
+LEDG[8] <= fsm:inst1.ok
 
 
 |projeto|teclado:inst2
@@ -2012,7 +2012,7 @@ S[14] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
 S[15] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projeto|fsm:inst25
+|projeto|fsm:inst1
 tecla[0] => Mux15.IN19
 tecla[0] => Decoder0.IN3
 tecla[0] => Mux18.IN17
