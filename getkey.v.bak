@@ -1,0 +1,15 @@
+module getkey(
+	input [3:0] atual;
+	output [3:0] tecla;
+);
+
+
+logic [3:0] passado;
+initial passado = 0;
+always @(*) begin
+		if (atual != passado) tecla = atual;
+		else;
+		passado = atual;
+end
+
+endmodule
