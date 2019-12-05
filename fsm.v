@@ -92,7 +92,10 @@ begin
 						key = 1;
 					end
 					else begin
+						logic [7:0] oldreg;
+						oldreg = regload;
 						regadress = B;
+						wait(oldreg != regload);
 						B = regload;
 					end
 				end

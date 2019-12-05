@@ -1,5 +1,5 @@
 Flow report for socorro
-Wed Dec  4 07:43:07 2019
+Wed Dec  4 23:13:16 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec  4 07:43:07 2019           ;
+; Flow Status                        ; Successful - Wed Dec  4 23:13:16 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; socorro                                         ;
 ; Top-level Entity Name              ; projeto                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 657 / 33,216 ( 2 % )                            ;
-;     Total combinational functions  ; 628 / 33,216 ( 2 % )                            ;
-;     Dedicated logic registers      ; 208 / 33,216 ( < 1 % )                          ;
-; Total registers                    ; 208                                             ;
-; Total pins                         ; 95 / 475 ( 20 % )                               ;
+; Total logic elements               ; 682 / 33,216 ( 2 % )                            ;
+;     Total combinational functions  ; 649 / 33,216 ( 2 % )                            ;
+;     Dedicated logic registers      ; 239 / 33,216 ( < 1 % )                          ;
+; Total registers                    ; 239                                             ;
+; Total pins                         ; 96 / 475 ( 20 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/04/2019 07:42:14 ;
+; Start date & time ; 12/04/2019 23:12:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; socorro             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.157545613400872                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.157551194800968                     ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
@@ -99,12 +99,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 544 MB              ; 00:00:07                           ;
-; Fitter                    ; 00:00:24     ; 1.0                     ; 711 MB              ; 00:00:19                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 548 MB              ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 541 MB              ; 00:00:07                           ;
+; Fitter                    ; 00:00:16     ; 1.0                     ; 711 MB              ; 00:00:14                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 544 MB              ; 00:00:04                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 495 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 795 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:40     ; --                      ; --                  ; 00:00:33                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 782 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:28                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

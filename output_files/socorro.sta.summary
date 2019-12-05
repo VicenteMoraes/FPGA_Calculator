@@ -2,92 +2,52 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'fsm:inst1|A[0]'
-Slack : -8.732
-TNS   : -90.569
+Type  : Slow Model Setup 'teclado:inst2|controlador:U0|Debouncer:d0|State'
+Slack : -5.059
+TNS   : -137.915
 
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : -6.415
-TNS   : -897.816
-
-Type  : Slow Model Setup 'KEY[0]'
-Slack : -2.676
-TNS   : -5.656
-
-Type  : Slow Model Hold 'KEY[0]'
-Slack : -5.390
-TNS   : -30.020
-
-Type  : Slow Model Hold 'fsm:inst1|A[0]'
-Slack : -4.357
-TNS   : -30.213
+Slack : -4.148
+TNS   : -690.825
 
 Type  : Slow Model Hold 'CLOCK_50'
-Slack : 0.041
+Slack : -2.522
+TNS   : -7.838
+
+Type  : Slow Model Hold 'teclado:inst2|controlador:U0|Debouncer:d0|State'
+Slack : 0.391
 TNS   : 0.000
-
-Type  : Slow Model Recovery 'fsm:inst1|A[0]'
-Slack : -0.803
-TNS   : -7.358
-
-Type  : Slow Model Removal 'fsm:inst1|A[0]'
-Slack : -0.236
-TNS   : -0.533
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
 TNS   : -209.380
 
-Type  : Slow Model Minimum Pulse Width 'KEY[0]'
-Slack : -1.222
-TNS   : -1.222
+Type  : Slow Model Minimum Pulse Width 'teclado:inst2|controlador:U0|Debouncer:d0|State'
+Slack : -0.500
+TNS   : -31.000
 
-Type  : Slow Model Minimum Pulse Width 'fsm:inst1|A[0]'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast Model Setup 'fsm:inst1|A[0]'
-Slack : -4.067
-TNS   : -37.544
+Type  : Fast Model Setup 'teclado:inst2|controlador:U0|Debouncer:d0|State'
+Slack : -1.732
+TNS   : -45.727
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : -2.410
-TNS   : -312.883
-
-Type  : Fast Model Setup 'KEY[0]'
-Slack : -0.900
-TNS   : -1.110
-
-Type  : Fast Model Hold 'KEY[0]'
-Slack : -3.082
-TNS   : -17.532
-
-Type  : Fast Model Hold 'fsm:inst1|A[0]'
-Slack : -2.194
-TNS   : -18.612
+Slack : -1.486
+TNS   : -239.315
 
 Type  : Fast Model Hold 'CLOCK_50'
-Slack : -0.253
-TNS   : -1.256
+Slack : -1.568
+TNS   : -18.692
 
-Type  : Fast Model Recovery 'fsm:inst1|A[0]'
-Slack : -0.343
-TNS   : -2.402
-
-Type  : Fast Model Removal 'fsm:inst1|A[0]'
-Slack : -0.052
-TNS   : -0.052
+Type  : Fast Model Hold 'teclado:inst2|controlador:U0|Debouncer:d0|State'
+Slack : 0.215
+TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
 TNS   : -209.380
 
-Type  : Fast Model Minimum Pulse Width 'KEY[0]'
-Slack : -1.222
-TNS   : -1.222
-
-Type  : Fast Model Minimum Pulse Width 'fsm:inst1|A[0]'
-Slack : 0.500
-TNS   : 0.000
+Type  : Fast Model Minimum Pulse Width 'teclado:inst2|controlador:U0|Debouncer:d0|State'
+Slack : -0.500
+TNS   : -31.000
 
 ------------------------------------------------------------
